@@ -16,7 +16,9 @@
 const inputForm = document.querySelector('#validation-input');
 const maxLength = Number(inputForm.dataset.length);
 
-inputForm.addEventListener('blur', event => {
+inputForm.addEventListener('blur', inputChecked);
+
+function inputChecked(event) {
   const outputData = event.currentTarget.value;
 
   if (outputData.length === maxLength) {
@@ -26,4 +28,4 @@ inputForm.addEventListener('blur', event => {
   }
   inputForm.classList.remove('valid');
   inputForm.classList.add('invalid');
-});
+}
