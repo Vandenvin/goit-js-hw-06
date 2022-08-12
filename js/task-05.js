@@ -8,7 +8,7 @@
 const inputForm = document.querySelector('#name-input');
 const outputName = document.querySelector('#name-output');
 
-inputForm.addEventListener('imput', event => {
+inputForm.addEventListener('input', event => {
   outputName.textContent = event.currentTarget.value;
 });
 
