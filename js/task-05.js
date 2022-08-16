@@ -10,9 +10,15 @@ const outputName = document.querySelector('#name-output');
 
 inputForm.addEventListener('input', event => {
   outputName.textContent = event.currentTarget.value;
+  if (event.currentTarget.value === '') {
+    outputName.textContent = 'Anonymous';
+  }
 });
 
 // Если необходимо вставить имя целиком, а не побуквенно то используем "blur"
 // inputForm.addEventListener('blur', event => {
 //   outputName.textContent = event.currentTarget.value;
+//   if (event.currentTarget.value === '') {
+//     outputName.textContent = 'Anonymous';
+//   }
 // });

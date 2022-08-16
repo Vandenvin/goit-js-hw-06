@@ -9,7 +9,7 @@
 const inputData = document.querySelector('#font-size-control');
 const text = document.querySelector('#text');
 
-inputData.addEventListener('change', onRangeChanged);
+inputData.addEventListener('input', onRangeChanged);
 
 function onRangeChanged(event) {
   const sizeValue = event.currentTarget.value;
